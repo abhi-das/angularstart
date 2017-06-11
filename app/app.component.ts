@@ -4,13 +4,13 @@ import { Component } from '@angular/core';
 	selector: 'app',
 	templateUrl: './partials/app.html'
 })
-
+/*
 export class Countries {
 
 	countryName: string;
 	countryShortName: string;
 
-}
+}*/
 
 
 export class AppComponent {
@@ -41,7 +41,7 @@ export class AppComponent {
 		];
 	}
 }
-
+/*
 var COUNTRIES:Countries[] = [{
 	countryName: "Canada",
 	countryShortName: "CA"
@@ -57,4 +57,4 @@ var COUNTRIES:Countries[] = [{
 }, {
 	countryName: "Swizerland",
 	countryShortName: "SZ"
-}];
+}];*/
