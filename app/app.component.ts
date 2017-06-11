@@ -28,6 +28,8 @@ var COUNTRIES:Countries[] = [{
 	countryShortName: "SZ"
 }];
 
+
+
 @Component({
 	selector: 'app',
 	templateUrl: './partials/app.html'
