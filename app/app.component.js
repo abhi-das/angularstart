@@ -11,7 +11,7 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var Countries, AppComponent, COUNTRIES;
+    var Countries, COUNTRIES, AppComponent;
     return {
         setters:[
             function (core_1_1) {
@@ -24,20 +24,6 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                 return Countries;
             }());
             exports_1("Countries", Countries);
-            AppComponent = (function () {
-                function AppComponent() {
-                    this.countryList = COUNTRIES;
-                }
-                AppComponent = __decorate([
-                    core_1.Component({
-                        selector: 'app',
-                        templateUrl: './partials/app.html'
-                    }), 
-                    __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
-            }());
-            exports_1("AppComponent", AppComponent);
             COUNTRIES = [{
                     countryNm: "Canada",
                     countryShortName: "CA"
@@ -54,6 +40,23 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                     countryNm: "Swizerland",
                     countryShortName: "SZ"
                 }];
+            AppComponent = (function () {
+                function AppComponent() {
+                    this.countryList = COUNTRIES;
+                }
+                AppComponent.prototype.showCountry = function (country) {
+                    this.currentCountry = country;
+                };
+                AppComponent = __decorate([
+                    core_1.Component({
+                        selector: 'app',
+                        templateUrl: './partials/app.html'
+                    }), 
+                    __metadata('design:paramtypes', [])
+                ], AppComponent);
+                return AppComponent;
+            }());
+            exports_1("AppComponent", AppComponent);
         }
     }
 });

@@ -1,23 +1,13 @@
 import { Component } from '@angular/core';
 
+import { CountryItemComponent } from './component.country-item';
+import { CountryDetailComponent } from './component.country.detail';
+
 
 export class Countries {
 
 	countryNm: string;
 	countryShortName: string;
-
-}
-
-@Component({
-	selector: 'app',
-	templateUrl: './partials/app.html'
-})
-
-
-export class AppComponent {
-
-	countryList = COUNTRIES;
-	// countryName = Countries;
 
 }
 
@@ -37,3 +27,20 @@ var COUNTRIES:Countries[] = [{
 	countryNm: "Swizerland",
 	countryShortName: "SZ"
 }];
+
+@Component({
+	selector: 'app',
+	templateUrl: './partials/app.html'
+})
+
+
+export class AppComponent {
+
+	countryList = COUNTRIES;
+	currentCountry: Countries;
+
+	showCountry(country) {
+		this.currentCountry = country;
+	}
+
+}

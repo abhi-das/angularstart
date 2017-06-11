@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import  { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { CountryItemComponent } from './component.country-item';
+import { CountryDetailComponent } from './component.country.detail';
 
 import { FormsModule } from '@angular/forms';
 
@@ -11,7 +13,7 @@ import { FormsModule } from '@angular/forms';
 		FormsModule
 	],
 	declarations: [
-		AppComponent
+		AppComponent, CountryItemComponent, CountryDetailComponent
 	],
 	bootstrap: [
 		AppComponent
