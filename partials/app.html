@@ -1,5 +1,5 @@
 <div>
-	<h1>Artist Directory {{countryName}}</h1>
+	<h1>Country Directory {{countryName}}</h1>
 	<p>
 		Laborum veniam ut eu proident deserunt sed velit reprehenderit cupidatat laboris dolore dolor eu commodo.
 	</p>
@@ -20,7 +20,7 @@
 			*ngFor="let country of countryList; let i = index;" 
 			(click)="onClickTest(country, liElement)"
 			>
-			{{country}}
+			{{country.countryNm}}
 		</li>
 
 	</ul>

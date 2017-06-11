@@ -24,7 +24,7 @@ export class AppComponent {
 	onClickTest(item, ele) {
 		// console.log(item);
 		// console.log(ele);
-		this.countryName = item;
+		this.countryName = item.countryNm;
 	}
 
 	addCountryFn(value) {

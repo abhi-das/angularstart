@@ -49,7 +49,7 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                 AppComponent.prototype.onClickTest = function (item, ele) {
                     // console.log(item);
                     // console.log(ele);
-                    this.countryName = item;
+                    this.countryName = item.countryNm;
                 };
                 AppComponent.prototype.addCountryFn = function (value) {
                     var entryIndex = this.countryList.map(function (e) {
