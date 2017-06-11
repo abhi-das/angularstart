@@ -15,67 +15,25 @@ export class Countries {
 
 
 export class AppComponent {
-	
-	countryName:  string;
 
-	countryList: any;
+	countryList = COUNTRIES;
+	// countryName = Countries;
 
-
-	onClickTest(item, ele) {
-		// console.log(item);
-		// console.log(ele);
-		this.countryName = item.countryNm;
-	}
-
-	addCountryFn(value) {
-		
-		var entryIndex = this.countryList.map(function(e){
-			return e.countryNm.toLowerCase();
-		}).indexOf(value.toLowerCase());
-
-		if(value !== '' && entryIndex < 0) {
-			this.countryList.push({
-				countryNm: value
-			});
-		}
-	}
-
-	constructor() {
-		this.countryName = "CANADA";
-		this.countryList = [
-			{
-				countryNm: "Canada",
-				countryShortName: "CA"
-			}, {
-				countryNm: "Netherland",
-				countryShortName: "ND"
-			}, {
-				countryNm: "Austria",
-				countryShortName: "AS"
-			}, {
-				countryNm: "Astralia",
-				countryShortName: "AST"
-			}, {
-				countryNm: "Swizerland",
-				countryShortName: "SZ"
-			}
-		];
-	}
 }
 
-/*var COUNTRIES:Countries[] = [{
-	countryName: "Canada",
+var COUNTRIES:Countries[] = [{
+	countryNm: "Canada",
 	countryShortName: "CA"
 }, {
-	countryName: "Netherland",
+	countryNm: "Netherland",
 	countryShortName: "ND"
 }, {
-	countryName: "Austria",
+	countryNm: "Austria",
 	countryShortName: "AS"
 }, {
-	countryName: "Astralia",
+	countryNm: "Astralia",
 	countryShortName: "AST"
 }, {
-	countryName: "Swizerland",
+	countryNm: "Swizerland",
 	countryShortName: "SZ"
-}];*/
+}];
