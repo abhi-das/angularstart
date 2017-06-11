@@ -1,27 +1,18 @@
 <div>
 	<h1>Country Directory {{countryName}}</h1>
-	<p>
-		Laborum veniam ut eu proident deserunt sed velit reprehenderit cupidatat laboris dolore dolor eu commodo.
-	</p>
-	<input type="text" #addCountry
-		(keyup.enter)="addCountryFn(addCountry.value)"
-		[(ngModel)] = "countryName"
-	>
-	<button
-		(click)="addCountryFn(addCountry.value)"
-	>
-		Add Country
-	</button>
 
-	<ul>
+	<input type="text" #addCountry
+		[(ngModel)] = "query"
+	>
+
+	<ul *ngIf="query">
 		
-		<li 
-			#liElement
-			*ngFor="let country of countryList; let i = index;" 
-			(click)="onClickTest(country, liElement)"
-			>
-			{{country.countryNm}}
+		<li *ngFor="let country of countryList; let i = index;" 
+			(click)="showCountry(country); query=''">
+			<country-item [cItem]=country></country-item>
 		</li>
 
 	</ul>
 </div>
+
+<country-detail *ngIf="currentCountry" [cItem]="currentCountry"></country-detail>
