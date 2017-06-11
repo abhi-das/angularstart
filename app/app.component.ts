@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
 
+
+export class Countries {
+
+	countryNm: string;
+	countryShortName: string;
+
+}
+
 @Component({
 	selector: 'app',
 	templateUrl: './partials/app.html'
 })
-/*
-export class Countries {
-
-	countryName: string;
-	countryShortName: string;
-
-}*/
 
 
 export class AppComponent {
@@ -20,29 +21,49 @@ export class AppComponent {
 	countryList: any;
 
 
-	onClickTest(item, ele){
+	onClickTest(item, ele) {
 		// console.log(item);
 		// console.log(ele);
 		this.countryName = item;
 	}
 
-	addCountryFn(value){
+	addCountryFn(value) {
+		
+		var entryIndex = this.countryList.map(function(e){
+			return e.countryNm.toLowerCase();
+		}).indexOf(value.toLowerCase());
 
-		if(value !== '' && this.countryList.indexOf(value) < 0) {
-			this.countryList.push(value);
+		if(value !== '' && entryIndex < 0) {
+			this.countryList.push({
+				countryNm: value
+			});
 		}
-
 	}
 
 	constructor() {
 		this.countryName = "CANADA";
 		this.countryList = [
-			"Canada", "United State", "United Kingdom", "Switzerland"
+			{
+				countryNm: "Canada",
+				countryShortName: "CA"
+			}, {
+				countryNm: "Netherland",
+				countryShortName: "ND"
+			}, {
+				countryNm: "Austria",
+				countryShortName: "AS"
+			}, {
+				countryNm: "Astralia",
+				countryShortName: "AST"
+			}, {
+				countryNm: "Swizerland",
+				countryShortName: "SZ"
+			}
 		];
 	}
 }
-/*
-var COUNTRIES:Countries[] = [{
+
+/*var COUNTRIES:Countries[] = [{
 	countryName: "Canada",
 	countryShortName: "CA"
 }, {

@@ -11,18 +11,39 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent;
+    var Countries, AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
+            Countries = (function () {
+                function Countries() {
+                }
+                return Countries;
+            }());
+            exports_1("Countries", Countries);
             AppComponent = (function () {
                 function AppComponent() {
                     this.countryName = "CANADA";
                     this.countryList = [
-                        "Canada", "United State", "United Kingdom", "Switzerland"
+                        {
+                            countryNm: "Canada",
+                            countryShortName: "CA"
+                        }, {
+                            countryNm: "Netherland",
+                            countryShortName: "ND"
+                        }, {
+                            countryNm: "Austria",
+                            countryShortName: "AS"
+                        }, {
+                            countryNm: "Astralia",
+                            countryShortName: "AST"
+                        }, {
+                            countryNm: "Swizerland",
+                            countryShortName: "SZ"
+                        }
                     ];
                 }
                 AppComponent.prototype.onClickTest = function (item, ele) {
@@ -31,8 +52,13 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                     this.countryName = item;
                 };
                 AppComponent.prototype.addCountryFn = function (value) {
-                    if (value !== '' && this.countryList.indexOf(value) < 0) {
-                        this.countryList.push(value);
+                    var entryIndex = this.countryList.map(function (e) {
+                        return e.countryNm.toLowerCase();
+                    }).indexOf(value.toLowerCase());
+                    if (value !== '' && entryIndex < 0) {
+                        this.countryList.push({
+                            countryNm: value
+                        });
                     }
                 };
                 AppComponent = __decorate([
@@ -48,8 +74,7 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         }
     }
 });
-/*
-var COUNTRIES:Countries[] = [{
+/*var COUNTRIES:Countries[] = [{
     countryName: "Canada",
     countryShortName: "CA"
 }, {
