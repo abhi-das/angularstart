@@ -26,19 +26,24 @@ System.register(['@angular/core'], function(exports_1, context_1) {
             exports_1("Countries", Countries);
             COUNTRIES = [{
                     countryNm: "Canada",
-                    countryShortName: "CA"
+                    countryShortName: "CA",
+                    isFavorite: false
                 }, {
                     countryNm: "Netherland",
-                    countryShortName: "ND"
+                    countryShortName: "ND",
+                    isFavorite: true
                 }, {
                     countryNm: "Austria",
-                    countryShortName: "AS"
+                    countryShortName: "AS",
+                    isFavorite: false
                 }, {
                     countryNm: "Astralia",
-                    countryShortName: "AST"
+                    countryShortName: "AST",
+                    isFavorite: false
                 }, {
                     countryNm: "Swizerland",
-                    countryShortName: "SZ"
+                    countryShortName: "SZ",
+                    isFavorite: false
                 }];
             AppComponent = (function () {
                 function AppComponent() {

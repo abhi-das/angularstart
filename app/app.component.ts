@@ -8,24 +8,30 @@ export class Countries {
 
 	countryNm: string;
 	countryShortName: string;
+	isFavorite: boolean;
 
 }
 
 var COUNTRIES:Countries[] = [{
 	countryNm: "Canada",
-	countryShortName: "CA"
+	countryShortName: "CA",
+	isFavorite: false
 }, {
 	countryNm: "Netherland",
-	countryShortName: "ND"
+	countryShortName: "ND",
+	isFavorite: true
 }, {
 	countryNm: "Austria",
-	countryShortName: "AS"
+	countryShortName: "AS",
+	isFavorite: false
 }, {
 	countryNm: "Astralia",
-	countryShortName: "AST"
+	countryShortName: "AST",
+	isFavorite: false
 }, {
 	countryNm: "Swizerland",
-	countryShortName: "SZ"
+	countryShortName: "SZ",
+	isFavorite: false
 }];
 
 

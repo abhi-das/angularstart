@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { FavDirective } from './fav.directive';
+
 
 @Component({
 	selector: 'country-detail',

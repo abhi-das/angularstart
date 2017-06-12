@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { CountryItemComponent } from './component.country-item';
 import { CountryDetailComponent } from './component.country.detail';
 
+import { FavDirective } from './fav.directive';
+
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -13,7 +15,7 @@ import { FormsModule } from '@angular/forms';
 		FormsModule
 	],
 	declarations: [
-		AppComponent, CountryItemComponent, CountryDetailComponent
+		AppComponent, CountryItemComponent, CountryDetailComponent, FavDirective
 	],
 	bootstrap: [
 		AppComponent

@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/platform-browser', './app.component', './component.country-item', './component.country.detail', '@angular/forms'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/platform-browser', './app.component', './component.country-item', './component.country.detail', './fav.directive', '@angular/forms'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', '@angular/platform-browser', './app.component'
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, platform_browser_1, app_component_1, component_country_item_1, component_country_detail_1, forms_1;
+    var core_1, platform_browser_1, app_component_1, component_country_item_1, component_country_detail_1, fav_directive_1, forms_1;
     var AppModule;
     return {
         setters:[
@@ -29,6 +29,9 @@ System.register(['@angular/core', '@angular/platform-browser', './app.component'
             function (component_country_detail_1_1) {
                 component_country_detail_1 = component_country_detail_1_1;
             },
+            function (fav_directive_1_1) {
+                fav_directive_1 = fav_directive_1_1;
+            },
             function (forms_1_1) {
                 forms_1 = forms_1_1;
             }],
@@ -43,7 +46,7 @@ System.register(['@angular/core', '@angular/platform-browser', './app.component'
                             forms_1.FormsModule
                         ],
                         declarations: [
-                            app_component_1.AppComponent, component_country_item_1.CountryItemComponent, component_country_detail_1.CountryDetailComponent
+                            app_component_1.AppComponent, component_country_item_1.CountryItemComponent, component_country_detail_1.CountryDetailComponent, fav_directive_1.FavDirective
                         ],
                         bootstrap: [
                             app_component_1.AppComponent
