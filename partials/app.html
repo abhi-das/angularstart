@@ -12,7 +12,9 @@
 	<ul *ngIf="query">
 		
 		<li class="country-list" *ngFor="let country of countryList; let i = index;" 
-			(click)="showCountry(country); query=''">
+			(click)="showCountry(country); query=''"
+			[class.is-active]="country.isFavorite"
+		>
 			<country-item [cItem]=country></country-item>
 		</li>
 
