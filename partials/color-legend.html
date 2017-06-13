@@ -1,3 +1,9 @@
-<ul class='color-legend'>
-	<li  *ngFor="let themeClr of themeColor" class="color-{{themeClr}}"></li>
-</ul>
+<div class='color-legend'>
+	
+	<ul>
+		<li  *ngFor="let themeClr of themeColor" class="color-{{themeClr.name}}" 
+			[ngClass]="isActiveFn(themeClr.active)"
+			></li>
+	</ul>
+	<small class="select-text-inst">selected</small>
+</div>

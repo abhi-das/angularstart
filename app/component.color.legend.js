@@ -21,6 +21,9 @@ System.register(['@angular/core'], function(exports_1, context_1) {
             ColorLegendComponent = (function () {
                 function ColorLegendComponent() {
                 }
+                ColorLegendComponent.prototype.isActiveFn = function (colorActive) {
+                    return (colorActive) ? 'is-selected' : '';
+                };
                 ColorLegendComponent = __decorate([
                     core_1.Component({
                         selector: "color-legend",

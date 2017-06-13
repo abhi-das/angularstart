@@ -28,27 +28,72 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                     countryNm: "Canada",
                     countryShortName: "CA",
                     isFavorite: false,
-                    legendTheme: ["green", "red", "purple"]
+                    legendTheme: [{
+                            name: "green",
+                            active: true
+                        }, {
+                            name: "red",
+                            active: false
+                        }, {
+                            name: "purple",
+                            active: false
+                        }]
                 }, {
                     countryNm: "Netherland",
                     countryShortName: "ND",
                     isFavorite: true,
-                    legendTheme: ["yellow", "blue", "red"]
+                    legendTheme: [{
+                            name: "yellow",
+                            active: false
+                        }, {
+                            name: "blue",
+                            active: false
+                        }, {
+                            name: "red",
+                            active: true
+                        }]
                 }, {
                     countryNm: "Austria",
                     countryShortName: "AS",
                     isFavorite: false,
-                    legendTheme: ["purple", "pink", "orange"]
+                    legendTheme: [{
+                            name: "purple",
+                            active: false
+                        }, {
+                            name: "pink",
+                            active: false
+                        }, {
+                            name: "orange",
+                            active: true
+                        }]
                 }, {
                     countryNm: "Astralia",
                     countryShortName: "AST",
                     isFavorite: false,
-                    legendTheme: ["orange", "red", "green"]
+                    legendTheme: [{
+                            name: "orange",
+                            active: false
+                        }, {
+                            name: "red",
+                            active: true
+                        }, {
+                            name: "green",
+                            active: false
+                        }]
                 }, {
                     countryNm: "Swizerland",
                     countryShortName: "SZ",
                     isFavorite: false,
-                    legendTheme: ["green", "orange", "blue"]
+                    legendTheme: [{
+                            name: "green",
+                            active: true
+                        }, {
+                            name: "orange",
+                            active: false
+                        }, {
+                            name: "blue",
+                            active: false
+                        }]
                 }];
             AppComponent = (function () {
                 function AppComponent() {

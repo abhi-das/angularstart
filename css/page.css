@@ -106,7 +106,20 @@ input {
 	background: #4F42EE;
 }
 
-
+/* IsClass or is-active or ngClass concept*/
 .is-active {
 	background: #2A7F11;
+}
+
+.is-green-selected {
+	transform: scale(1.5);
+}
+
+.is-selected { 
+	transform: scale(1.5);
+}
+
+.select-text-inst{
+	color: gray;
+	text-transform: uppercase;
 }

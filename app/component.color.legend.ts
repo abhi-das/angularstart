@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
 	inputs: ['themeColor']
 })
 
-export class ColorLegendComponent {}
+export class ColorLegendComponent {
+
+
+	isActiveFn(colorActive) {
+
+		return (colorActive) ? 'is-selected' : '';
+	}
+}
 
