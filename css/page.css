@@ -27,7 +27,7 @@ input {
 }
 
 
-li {
+.country-list{
 	background: #c1c1c1;
 	color: white;
 	cursor: pointer;
@@ -36,9 +36,10 @@ li {
 	transition: all 0.3s ease-out;
 	list-style: none;
 	border-radius: 5px;
+	overflow: auto;
 }
 
-li:hover {
+.country-list:hover {
     cursor: pointer;
     background: #FDF6E3;
 	color: black;
@@ -65,3 +66,44 @@ li:hover {
 .fav-selected {
 	color: #cc1c1c;
 }
+
+/*
+ * Color legend theme 
+*/
+.color-legend {
+	margin: .5em;
+	float: right;
+}
+
+.color-legend li {
+	display: inline-block;
+	width: .5em;
+	height: .5em;
+	margin: .1em;
+	transition: all .2s ease-out;
+}
+
+.color-legend li:hover {
+	transform: scale(1.3); 
+}
+.color-green{
+	background: #2A7F11;
+}.color-red{
+	background: #EE0404;
+}.color-purple{
+	background: #7F1166;
+}
+.color-orange{
+	background: #FF4A1E;
+}
+.color-yellow{
+	background: #FF8F00;
+}
+.color-pink{
+	background: #FF0037;
+}
+.color-blue{
+	background: #4F42EE;
+}
+
+

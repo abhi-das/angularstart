@@ -27,23 +27,28 @@ System.register(['@angular/core'], function(exports_1, context_1) {
             COUNTRIES = [{
                     countryNm: "Canada",
                     countryShortName: "CA",
-                    isFavorite: false
+                    isFavorite: false,
+                    legendTheme: ["green", "red", "purple"]
                 }, {
                     countryNm: "Netherland",
                     countryShortName: "ND",
-                    isFavorite: true
+                    isFavorite: true,
+                    legendTheme: ["yellow", "blue", "red"]
                 }, {
                     countryNm: "Austria",
                     countryShortName: "AS",
-                    isFavorite: false
+                    isFavorite: false,
+                    legendTheme: ["purple", "pink", "orange"]
                 }, {
                     countryNm: "Astralia",
                     countryShortName: "AST",
-                    isFavorite: false
+                    isFavorite: false,
+                    legendTheme: ["orange", "red", "green"]
                 }, {
                     countryNm: "Swizerland",
                     countryShortName: "SZ",
-                    isFavorite: false
+                    isFavorite: false,
+                    legendTheme: ["green", "orange", "blue"]
                 }];
             AppComponent = (function () {
                 function AppComponent() {

@@ -36,7 +36,7 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                 /* Bind Event on Fav icon click and update the value in Array*/
                 FavDirective.prototype.onClickCustomHandler = function () {
                     this.isFavorite = !this.isFavorite;
-                    this.countryName.isFavorite = this.isFavorite;
+                    this.countryName["isFavorite"] = this.isFavorite;
                 };
                 __decorate([
                     core_1.Input(), 

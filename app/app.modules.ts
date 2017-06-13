@@ -9,13 +9,16 @@ import { FavDirective } from './fav.directive';
 
 import { FormsModule } from '@angular/forms';
 
+
+import { ColorLegendComponent } from './component.color.legend';
+
 @NgModule({
 	imports:[
 		BrowserModule,
 		FormsModule
 	],
 	declarations: [
-		AppComponent, CountryItemComponent, CountryDetailComponent, FavDirective
+		AppComponent, CountryItemComponent, CountryDetailComponent, FavDirective, ColorLegendComponent
 	],
 	bootstrap: [
 		AppComponent

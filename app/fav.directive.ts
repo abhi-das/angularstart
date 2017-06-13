@@ -6,6 +6,8 @@ import { Directive, HostBinding, HostListener, Input } from '@angular/core';
 
 export class FavDirective {
 
+	countryName: object;
+
 	/* Set the Default value */
 	@Input() set myFav(item) {
 		this.countryName = item;
@@ -18,7 +20,7 @@ export class FavDirective {
 	/* Bind Event on Fav icon click and update the value in Array*/
 	@HostListener('click') onClickCustomHandler() {
 		this.isFavorite = !this.isFavorite;
-		this.countryName.isFavorite = this.isFavorite;
+		this.countryName["isFavorite"] = this.isFavorite;
 	}
 
 }
