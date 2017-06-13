@@ -6,7 +6,7 @@ import { Directive, HostBinding, HostListener, Input } from '@angular/core';
 
 export class FavDirective {
 
-	countryName: object;
+	countryName: Object;
 
 	/* Set the Default value */
 	@Input() set myFav(item) {
