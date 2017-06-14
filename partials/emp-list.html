@@ -1,0 +1,7 @@
+<ul class="emp-list">
+	<li *ngFor="let emp of empList">
+		<p>{{emp.name}}</p>
+		<p><span>{{emp.location}}</span> <span>{{emp.role}}</span></p>
+		<span class="close-btn" (click)="onDelete(emp)">x</span>
+	</li>
+</ul>

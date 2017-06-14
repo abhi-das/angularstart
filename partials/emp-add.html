@@ -1,0 +1,13 @@
+<div class="emp-add">
+
+	<p>
+		
+		<input type="text" placeholder="Add Employee" #newEmpName>
+		<input type="text" placeholder="Add Salary" #newEmpSalary>
+		<input type="text" placeholder="Add Location" #newEmpLocation>
+
+	</p>
+
+	<button class="add-btn" (click)="addEmp(newEmpName.value,newEmpSalary.value,newEmpLocation.value)">Add Employee</button>
+
+</div>
