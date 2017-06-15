@@ -31,8 +31,18 @@ export class EmpSearchFormComponent {
 		// let temp = locationList.map((val) => { return val.toLowerCase(); });
 		// if(temp.indexOf(control.value) === -1 ) {
 
-		if(control.value.toLowerCase() !== "test" ) {
-			return { 'empLocation' : true };
+		if (control.value.trim().length === 0) {
+			return null;
+		}
+
+		if(control.value.trim().toLowerCase() !== "test") {
+			/*Fail the test then send error message back to controller*/
+			return { 
+				'empLocation': {
+					validFlag: true,
+					testPass: "YES" 
+				}
+			};
 		} else {
 			return null;
 		}

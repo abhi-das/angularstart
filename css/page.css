@@ -49,4 +49,6 @@ hr {
 
 .error {
 	color: red;
+	font-size: .8em;
+	font-weight: 600;
 }
