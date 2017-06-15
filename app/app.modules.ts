@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 
 import { FormsModule } from '@angular/forms';
 
+import { EmpSearchFormComponent } from './component.emp.search.form';
+
 @NgModule({
 	imports:[
 		BrowserModule,
 		FormsModule
 	],
 	declarations: [
-		AppComponent
+		AppComponent, EmpSearchFormComponent
 	],
 	bootstrap: [
 		AppComponent

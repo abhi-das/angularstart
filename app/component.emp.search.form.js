@@ -11,27 +11,30 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent;
+    var EmpSearchFormComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            EmpSearchFormComponent = (function () {
+                function EmpSearchFormComponent() {
                 }
-                AppComponent = __decorate([
+                EmpSearchFormComponent.prototype.onSubmit = function (empDetail) {
+                    console.log(empDetail);
+                };
+                EmpSearchFormComponent = __decorate([
                     core_1.Component({
-                        selector: 'app',
-                        templateUrl: './partials/app.html'
+                        selector: "emp-search-form",
+                        templateUrl: "./partials/emp-search-form.html"
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], EmpSearchFormComponent);
+                return EmpSearchFormComponent;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("EmpSearchFormComponent", EmpSearchFormComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=component.emp.search.form.js.map
