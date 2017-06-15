@@ -49,8 +49,9 @@ System.register(['@angular/core', '@angular/forms', './validator.rules.service']
                         /*Fail the test then send error message back to controller*/
                         return {
                             'empLocation': {
-                                validFlag: true,
-                                testPass: "YES"
+                                answer: "test",
+                                validFlag: "NO",
+                                testPass: "NO"
                             }
                         };
                     }

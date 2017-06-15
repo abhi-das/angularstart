@@ -11,8 +11,8 @@ export class ValidatorRulesService {
 			return { 
 				'lastName': {
 					answer: "test",
-					validFlag : true,
-					testPass: "YES for last name"  
+					validFlag : "No",
+					testPass: "NO"  
 				}
 			};
 		} else {

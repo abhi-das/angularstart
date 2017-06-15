@@ -40,8 +40,8 @@ export class EmpSearchFormComponent {
 			return { 
 				'empLocation': {
 					answer: "test",
-					validFlag: true,
-					testPass: "YES" 
+					validFlag: "NO",
+					testPass: "NO" 
 				}
 			};
 		} else {

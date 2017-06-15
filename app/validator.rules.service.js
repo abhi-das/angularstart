@@ -16,8 +16,9 @@ System.register([], function(exports_1, context_1) {
                         /*Fail the test then send error message back to controller*/
                         return {
                             'lastName': {
-                                validFlag: true,
-                                testPass: "YES for last name"
+                                answer: "test",
+                                validFlag: "No",
+                                testPass: "NO"
                             }
                         };
                     }
