@@ -14,7 +14,8 @@
 			<input type="text" name="lastName" id='lastName' formControlName="lastName">
 		</p>
 		<p *ngIf="form.controls.lastName.errors?.lastName" class="error">
-			This is a mandatory field to 
+			You need to type 
+			{{form.controls.lastName.errors?.lastName.answer}} || 
 			{{form.controls.lastName.errors?.lastName.validFlag}} and test pass 
 			{{form.controls.lastName.errors?.lastName.testPass}}.
 		</p>
@@ -23,11 +24,12 @@
 			<input type="text" name="empLocation" id='empLocation' formControlName="empLocation">
 		</p>
 		<p *ngIf="form.controls.empLocation.errors?.empLocation" class="error">
-			This is a mandatory field to 
+			You need to type 
+			{{form.controls.lastName.errors?.lastName.answer}} || 
 			{{form.controls.empLocation.errors?.empLocation.validFlag}} and test pass 
 			{{form.controls.empLocation.errors?.empLocation.testPass}}.
 		</p>
-		
+
 		<button type="submit" [disabled]="!form.valid">Search</button>
 	</form>
 </div>
