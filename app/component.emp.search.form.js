@@ -1,4 +1,4 @@
-System.register(['@angular/core'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/forms', './validator.rules.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,17 +10,45 @@ System.register(['@angular/core'], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, forms_1, validator_rules_service_1;
     var EmpSearchFormComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+            },
+            function (validator_rules_service_1_1) {
+                validator_rules_service_1 = validator_rules_service_1_1;
             }],
         execute: function() {
             EmpSearchFormComponent = (function () {
-                function EmpSearchFormComponent() {
+                function EmpSearchFormComponent(validatorRulesService) {
+                    this.validatorRulesService = validatorRulesService;
                 }
+                EmpSearchFormComponent.prototype.ngOnInit = function () {
+                    this.form = new forms_1.FormGroup({
+                        empName: new forms_1.FormControl('', forms_1.Validators.compose([
+                            forms_1.Validators.required,
+                            forms_1.Validators.pattern('[\\w\\-\\s\\/]+')
+                        ])),
+                        lastName: new forms_1.FormControl('', this.validatorRulesService.lastNameRules),
+                        empLocation: new forms_1.FormControl('', this.locationChecker)
+                    });
+                };
+                EmpSearchFormComponent.prototype.locationChecker = function (control) {
+                    // let locationList = ["New York", "Munich", "Germany", "York Land"];
+                    // let temp = locationList.map((val) => { return val.toLowerCase(); });
+                    // if(temp.indexOf(control.value) === -1 ) {
+                    if (control.value.toLowerCase() !== "test") {
+                        return { 'empLocation': true };
+                    }
+                    else {
+                        return null;
+                    }
+                };
                 EmpSearchFormComponent.prototype.onSubmit = function (empDetail) {
                     console.log(empDetail);
                 };
@@ -29,7 +57,7 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                         selector: "emp-search-form",
                         templateUrl: "./partials/emp-search-form.html"
                     }), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [validator_rules_service_1.ValidatorRulesService])
                 ], EmpSearchFormComponent);
                 return EmpSearchFormComponent;
             }());

@@ -1,15 +1,25 @@
 <div>
 	<form class="emp-search-form" 
-			#empDetail="ngForm"
-			(ngSubmit)="onSubmit(empDetail.value)">
+			[formGroup]="form"
+			(ngSubmit)="onSubmit(form.value)">
 		<p class="field">
-			<label for="emp-name">Employee Name: </label>
-			<input type="text" name="emp-name" id='emp-name' ngModel>
+			<label for="empName">Employee Name: </label>
+			<input type="text" name="empName" id='empName' formControlName="empName">
+		</p>
+		<p *ngIf="form.controls.empName.errors?.pattern" class="error">
+			This is a mandatory field.
 		</p>
 		<p class="field">
-			<label for="emp-location">Employee Location: </label>
-			<input type="text" name="emp-location" id='emp-location' ngModel>
+			<label for="lastName">Last Name: </label>
+			<input type="text" name="lastName" id='lastName' formControlName="lastName">
 		</p>
-		<button type="submit">Search</button>
+		<p *ngIf="form.controls.lastName.errors?.pattern" class="error">
+			This is a mandatory field.
+		</p>
+		<p class="field">
+			<label for="empLocation">Employee Location: </label>
+			<input type="text" name="empLocation" id='empLocation' formControlName="empLocation">
+		</p>
+		<button type="submit" [disabled]="!form.valid">Search</button>
 	</form>
 </div>

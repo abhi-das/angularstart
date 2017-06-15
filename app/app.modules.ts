@@ -3,17 +3,22 @@ import  { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { EmpSearchFormComponent } from './component.emp.search.form';
+
+import { ValidatorRulesService } from './validator.rules.service';
 
 @NgModule({
 	imports:[
 		BrowserModule,
-		FormsModule
+		ReactiveFormsModule
 	],
 	declarations: [
 		AppComponent, EmpSearchFormComponent
+	],
+	providers: [
+		ValidatorRulesService
 	],
 	bootstrap: [
 		AppComponent

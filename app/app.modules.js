@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/platform-browser', './app.component', '@angular/forms', './component.emp.search.form'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/platform-browser', './app.component', '@angular/forms', './component.emp.search.form', './validator.rules.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', '@angular/platform-browser', './app.component'
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, platform_browser_1, app_component_1, forms_1, component_emp_search_form_1;
+    var core_1, platform_browser_1, app_component_1, forms_1, component_emp_search_form_1, validator_rules_service_1;
     var AppModule;
     return {
         setters:[
@@ -28,6 +28,9 @@ System.register(['@angular/core', '@angular/platform-browser', './app.component'
             },
             function (component_emp_search_form_1_1) {
                 component_emp_search_form_1 = component_emp_search_form_1_1;
+            },
+            function (validator_rules_service_1_1) {
+                validator_rules_service_1 = validator_rules_service_1_1;
             }],
         execute: function() {
             AppModule = (function () {
@@ -37,10 +40,13 @@ System.register(['@angular/core', '@angular/platform-browser', './app.component'
                     core_1.NgModule({
                         imports: [
                             platform_browser_1.BrowserModule,
-                            forms_1.FormsModule
+                            forms_1.ReactiveFormsModule
                         ],
                         declarations: [
                             app_component_1.AppComponent, component_emp_search_form_1.EmpSearchFormComponent
+                        ],
+                        providers: [
+                            validator_rules_service_1.ValidatorRulesService
                         ],
                         bootstrap: [
                             app_component_1.AppComponent
