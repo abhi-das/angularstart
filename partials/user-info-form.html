@@ -1,0 +1,31 @@
+<form class="user-profile-form" novalidate 
+	[formGroup]="form"
+	(ngSubmit)="onFormSubmit(form.value)">
+	<div>
+		<p>
+			<label for="firstName">First Name: </label>
+			<input type="text" class="field" name="firstName" id="firstName" formControlName="firstName">
+
+			<!-- <p class="error" *ngIf="form.controls.firstName.errors?.firstName">
+				Show Errors!
+			</p> -->
+		</p>
+		<p>
+			<label for="lastName">Last Name: </label>
+			<input type="text" class="field" name="lastName" id="lastName" formControlName="lastName">
+		</p>					
+	</div>
+	<div>
+		<p>
+			<label for="location">Location: </label>
+			<input type="text" class="field" name="location" id="location" formControlName="location">
+		</p>
+		<p>
+			<label for="email">Email: </label>
+			<input type="text" class="field" name="email" id="email" formControlName="email">
+		</p>					
+	</div>
+	<button type='submit' class="submit-cta" [disabled]="!form.valid">
+		Submit
+	</button>
+</form>

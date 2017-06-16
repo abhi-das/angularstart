@@ -11,27 +11,33 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent;
+    var UserInfoComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            UserInfoComponent = (function () {
+                function UserInfoComponent() {
+                    this.imgPath = "./img/";
+                    this.imgName = "userpic.png";
                 }
-                AppComponent = __decorate([
+                __decorate([
+                    core_1.Input(), 
+                    __metadata('design:type', String)
+                ], UserInfoComponent.prototype, "imgPath", void 0);
+                UserInfoComponent = __decorate([
                     core_1.Component({
-                        selector: 'app',
-                        templateUrl: './partials/app.html'
+                        selector: "user-info",
+                        templateUrl: "./partials/user-info.html"
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], UserInfoComponent);
+                return UserInfoComponent;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("UserInfoComponent", UserInfoComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=component.user.info.js.map
