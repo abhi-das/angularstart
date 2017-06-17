@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/platform-browser', './app.component', './component.user.info', './component.user.info.form', '@angular/forms', './service.user.form.rules'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/platform-browser', './app.component', './component.user.info', './component.user.info.form', '@angular/forms', './service.user.form.rules', './providers'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', '@angular/platform-browser', './app.component'
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, platform_browser_1, app_component_1, component_user_info_1, component_user_info_form_1, forms_1, service_user_form_rules_1;
+    var core_1, platform_browser_1, app_component_1, component_user_info_1, component_user_info_form_1, forms_1, service_user_form_rules_1, providers_1;
     var AppModule;
     return {
         setters:[
@@ -34,6 +34,9 @@ System.register(['@angular/core', '@angular/platform-browser', './app.component'
             },
             function (service_user_form_rules_1_1) {
                 service_user_form_rules_1 = service_user_form_rules_1_1;
+            },
+            function (providers_1_1) {
+                providers_1 = providers_1_1;
             }],
         execute: function() {
             AppModule = (function () {
@@ -48,7 +51,10 @@ System.register(['@angular/core', '@angular/platform-browser', './app.component'
                             app_component_1.AppComponent, component_user_info_1.UserInfoComponent, component_user_info_form_1.UserInfoFormComponent
                         ],
                         providers: [
-                            service_user_form_rules_1.UserProfileRulesService
+                            service_user_form_rules_1.UserProfileRulesService, {
+                                provide: providers_1.locationListToken,
+                                useValue: providers_1.empLocationList
+                            }
                         ],
                         bootstrap: [
                             app_component_1.AppComponent

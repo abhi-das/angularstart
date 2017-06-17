@@ -89,12 +89,14 @@ body {
 	margin-top: .5em; 
 }
 
+
 .user-profile-form .field{
 	display: block;
 	padding: .5em;
 	border-radius: 5px;
 	outline: none;
 	border: 1px solid #D7DFD0; 
+	width: 100%;
 }
 .form-container {
 	vertical-align: top;
@@ -118,4 +120,6 @@ body {
 }
 .error {
 	color: red;
+	display: inline-block;
+	margin: 1em; 
 }

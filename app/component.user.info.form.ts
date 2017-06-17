@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { UserProfileRulesService } from './service.user.form.rules';
+
+import { locationListToken } from './providers';
 
 @Component({
 	selector: "user-info-form",
@@ -13,11 +15,13 @@ export class UserInfoFormComponent {
 
 	form;
 
-	constructor(private userRulesService: UserProfileRulesService){}
+	constructor(private userRulesService: UserProfileRulesService,
+		@Inject(locationListToken) public empLocationList){}
 
 	ngOnInit() {
+
 		this.form = new FormGroup({
-			firstName: new FormControl('', this.userRulesService.firstNameRules),
+			firstName: new FormControl('', this.userRulesService.firstName),
 			lastName: new FormControl('', Validators.compose([
 				Validators.required				
 			])),

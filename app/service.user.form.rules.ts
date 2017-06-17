@@ -1,17 +1,18 @@
 export class UserProfileRulesService {
 
-	firstNameRules(firstName) {
+	firstName(firstName) {
 
-		console.log(firstName.value.trim());
-		if(firstName.value.toLowerCase().trim().length > 0) {
+		if(firstName.value.toLowerCase().trim().length == 0) {
 			return null;
 		}
 
-		if(firstName.value.toLowerCase().trim() == 'test') {
+		if(firstName.value.toLowerCase().trim() !== 'john') {
+			// console.log("error!!");
 			return {
-				'firstName' : false
+				'firstName' : true
 			}
 		} else {
+			// console.log("no error!!");
 			return null;
 		}
 

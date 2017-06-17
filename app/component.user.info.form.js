@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/forms', './service.user.form.rules'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/forms', './service.user.form.rules', './providers'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,10 @@ System.register(['@angular/core', '@angular/forms', './service.user.form.rules']
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, forms_1, service_user_form_rules_1;
+    var __param = (this && this.__param) || function (paramIndex, decorator) {
+        return function (target, key) { decorator(target, key, paramIndex); }
+    };
+    var core_1, forms_1, service_user_form_rules_1, providers_1;
     var UserInfoFormComponent;
     return {
         setters:[
@@ -22,15 +25,19 @@ System.register(['@angular/core', '@angular/forms', './service.user.form.rules']
             },
             function (service_user_form_rules_1_1) {
                 service_user_form_rules_1 = service_user_form_rules_1_1;
+            },
+            function (providers_1_1) {
+                providers_1 = providers_1_1;
             }],
         execute: function() {
             UserInfoFormComponent = (function () {
-                function UserInfoFormComponent(userRulesService) {
+                function UserInfoFormComponent(userRulesService, empLocationList) {
                     this.userRulesService = userRulesService;
+                    this.empLocationList = empLocationList;
                 }
                 UserInfoFormComponent.prototype.ngOnInit = function () {
                     this.form = new forms_1.FormGroup({
-                        firstName: new forms_1.FormControl('', this.userRulesService.firstNameRules),
+                        firstName: new forms_1.FormControl('', this.userRulesService.firstName),
                         lastName: new forms_1.FormControl('', forms_1.Validators.compose([
                             forms_1.Validators.required
                         ])),
@@ -49,8 +56,9 @@ System.register(['@angular/core', '@angular/forms', './service.user.form.rules']
                     core_1.Component({
                         selector: "user-info-form",
                         templateUrl: "./partials/user-info-form.html"
-                    }), 
-                    __metadata('design:paramtypes', [service_user_form_rules_1.UserProfileRulesService])
+                    }),
+                    __param(1, core_1.Inject(providers_1.locationListToken)), 
+                    __metadata('design:paramtypes', [service_user_form_rules_1.UserProfileRulesService, Object])
                 ], UserInfoFormComponent);
                 return UserInfoFormComponent;
             }());

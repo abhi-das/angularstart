@@ -10,6 +10,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { UserProfileRulesService } from './service.user.form.rules'
 
+import { locationListToken, empLocationList } from './providers';
+
+
 @NgModule({
 	imports:[
 		BrowserModule, ReactiveFormsModule
@@ -18,7 +21,10 @@ import { UserProfileRulesService } from './service.user.form.rules'
 		AppComponent, UserInfoComponent, UserInfoFormComponent
 	],
 	providers: [
-		UserProfileRulesService
+		UserProfileRulesService, {
+			provide: locationListToken, 
+			useValue: empLocationList
+		}
 	],
 	bootstrap: [
 		AppComponent

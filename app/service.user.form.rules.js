@@ -8,17 +8,18 @@ System.register([], function(exports_1, context_1) {
             UserProfileRulesService = (function () {
                 function UserProfileRulesService() {
                 }
-                UserProfileRulesService.prototype.firstNameRules = function (firstName) {
-                    console.log(firstName.value.trim());
-                    if (firstName.value.toLowerCase().trim().length > 0) {
+                UserProfileRulesService.prototype.firstName = function (firstName) {
+                    if (firstName.value.toLowerCase().trim().length == 0) {
                         return null;
                     }
-                    if (firstName.value.toLowerCase().trim() == 'test') {
+                    if (firstName.value.toLowerCase().trim() !== 'john') {
+                        // console.log("error!!");
                         return {
-                            'firstName': false
+                            'firstName': true
                         };
                     }
                     else {
+                        // console.log("no error!!");
                         return null;
                     }
                 };
