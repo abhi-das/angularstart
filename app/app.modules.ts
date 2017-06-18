@@ -2,10 +2,13 @@ import { NgModule } from '@angular/core';
 import  { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { EmpDetailObserveComponent } from './emp-detail-observable-component';
 
 import { FormsModule } from '@angular/forms';
 
 import { HttpModule  } from '@angular/http';
+
+
 
 @NgModule({
 	imports:[
@@ -14,7 +17,7 @@ import { HttpModule  } from '@angular/http';
 		HttpModule
 	],
 	declarations: [
-		AppComponent
+		AppComponent, EmpDetailObserveComponent
 	],
 	providers: [],
 	bootstrap: [
