@@ -27,7 +27,7 @@ System.register(['@angular/core', './emp-detail-service-observ'], function(expor
                 }
                 EmpDetailObserveComponent.prototype.ngOnInit = function () {
                     var _this = this;
-                    this.detailObsService.getDetails().subscribe(function (empInfo) { return _this.detailInfo = empInfo; });
+                    this.detailObsService.getDetails("emp-details.json").subscribe(function (empInfo) { return _this.detailInfo = empInfo; });
                 };
                 EmpDetailObserveComponent = __decorate([
                     core_1.Component({

@@ -26,7 +26,8 @@ System.register(['@angular/core', './emp.detail.service'], function(exports_1, c
                     this.empDetailService = empDetailService;
                 }
                 AppComponent.prototype.ngOnInit = function () {
-                    this.empDetailService.fetchData().subscribe(function (data) { return console.log(data); });
+                    var _this = this;
+                    this.empDetailService.fetchData().subscribe(function (data) { return _this.basicEx = data; });
                 };
                 AppComponent = __decorate([
                     core_1.Component({

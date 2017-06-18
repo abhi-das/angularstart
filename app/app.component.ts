@@ -10,12 +10,13 @@ import { EmpDetailService }  from './emp.detail.service';
 
 export class AppComponent {
 
+	basicEx: any;
 	constructor(private empDetailService: EmpDetailService) {}
 
 	ngOnInit(){
 
 		this.empDetailService.fetchData().subscribe(
-			(data) => console.log(data)
+			(data) => this.basicEx = data
 		);
 
 	}

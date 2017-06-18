@@ -11,7 +11,7 @@ System.register(['@angular/core', '@angular/http'], function(exports_1, context_
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, http_1;
-    var EmpDetailServiceObserv;
+    var CountryNameService;
     return {
         setters:[
             function (core_1_1) {
@@ -21,24 +21,25 @@ System.register(['@angular/core', '@angular/http'], function(exports_1, context_
                 http_1 = http_1_1;
             }],
         execute: function() {
-            EmpDetailServiceObserv = (function () {
-                function EmpDetailServiceObserv(http) {
+            CountryNameService = (function () {
+                function CountryNameService(http) {
                     this.http = http;
                 }
-                EmpDetailServiceObserv.prototype.extractData = function (res) {
+                CountryNameService.prototype.extractData = function (res) {
                     return res.json();
                 };
-                EmpDetailServiceObserv.prototype.getDetails = function (fileName) {
-                    return this.http.get('../data/' + fileName).map(this.extractData);
+                CountryNameService.prototype.getCountryName = function () {
+                    return this.http.get('./data/country.json').map(this.extractData);
                 };
-                EmpDetailServiceObserv = __decorate([
+                ;
+                CountryNameService = __decorate([
                     core_1.Injectable(), 
                     __metadata('design:paramtypes', [http_1.Http])
-                ], EmpDetailServiceObserv);
-                return EmpDetailServiceObserv;
+                ], CountryNameService);
+                return CountryNameService;
             }());
-            exports_1("EmpDetailServiceObserv", EmpDetailServiceObserv);
+            exports_1("CountryNameService", CountryNameService);
         }
     }
 });
-//# sourceMappingURL=emp-detail-service-observ.js.map
+//# sourceMappingURL=country.service.js.map

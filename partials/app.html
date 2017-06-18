@@ -1,10 +1,25 @@
 <div>
-	<h1>Artist Directory {{countryName}}</h1>
-	<p>
-		Laborum veniam ut eu proident deserunt sed velit reprehenderit cupidatat laboris dolore dolor eu commodo.
-	</p>
-	
+	<div class="user-info">
+		
+		<div class="container">
+			<h3>Basic Example of HTTTP Service</h3>
+			<ul class="basic-ex">
+				<li *ngFor="let sm of basicEx">{{sm.name}}</li>
+			</ul>
+		</div>
+	</div>
 
 	<emp-detail-observe></emp-detail-observe>
+	<show-country></show-country>
+	
+
+	<footer>
+		<div class="container">
+			<p>
+				The below have been used in the examples.
+			</p>
+			<p>Custom Services, HTTP Module, @Injectable, Custom Data Modal, Providers, Subscribe Method</p>
+		</div>
+	</footer>
 
 </div>

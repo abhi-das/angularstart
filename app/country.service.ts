@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import { EmpDetailModal } from './emp-detail-modal';
+import { CountryModal } from './country.modal';
 
 @Injectable()
-export class EmpDetailServiceObserv {
+export class CountryNameService {
 
 	constructor(private http: Http) {}
 
@@ -12,8 +12,7 @@ export class EmpDetailServiceObserv {
 		return res.json();
 	}
 
-	getDetails(fileName): Observable<EmpDetailModal[]> {
-		return this.http.get('../data/'+fileName).map(this.extractData);
-	}
-
+	getCountryName(): Observable<CountryModal[]> {
+		return this.http.get('./data/country.json').map(this.extractData)
+	};
 }
