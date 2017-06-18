@@ -1,4 +1,4 @@
-System.register(['@angular/core'], function(exports_1, context_1) {
+System.register(['@angular/core', './emp.detail.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,37 +10,31 @@ System.register(['@angular/core'], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, emp_detail_service_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (emp_detail_service_1_1) {
+                emp_detail_service_1 = emp_detail_service_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
-                function AppComponent() {
-                    this.countryName = "CANADA";
-                    this.countryList = [
-                        "Canada", "United State", "United Kingdom", "Switzerland"
-                    ];
+                function AppComponent(empDetailService) {
+                    this.empDetailService = empDetailService;
                 }
-                AppComponent.prototype.onClickTest = function (item, ele) {
-                    // console.log(item);
-                    // console.log(ele);
-                    this.countryName = item;
-                };
-                AppComponent.prototype.addCountryFn = function (value) {
-                    if (value !== '' && this.countryList.indexOf(value) < 0) {
-                        this.countryList.push(value);
-                    }
+                AppComponent.prototype.ngOnInit = function () {
+                    this.empDetailService.fetchData().subscribe(function (data) { return console.log(data); });
                 };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'app',
-                        templateUrl: './partials/app.html'
+                        templateUrl: './partials/app.html',
+                        providers: [emp_detail_service_1.EmpDetailService]
                     }), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [emp_detail_service_1.EmpDetailService])
                 ], AppComponent);
                 return AppComponent;
             }());
@@ -48,21 +42,4 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         }
     }
 });
-/*
-var COUNTRIES:Countries[] = [{
-    countryName: "Canada",
-    countryShortName: "CA"
-}, {
-    countryName: "Netherland",
-    countryShortName: "ND"
-}, {
-    countryName: "Austria",
-    countryShortName: "AS"
-}, {
-    countryName: "Astralia",
-    countryShortName: "AST"
-}, {
-    countryName: "Swizerland",
-    countryShortName: "SZ"
-}];*/ 
 //# sourceMappingURL=app.component.js.map

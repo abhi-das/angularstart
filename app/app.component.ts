@@ -1,60 +1,23 @@
 import { Component } from '@angular/core';
 
+import { EmpDetailService }  from './emp.detail.service';
+
 @Component({
 	selector: 'app',
-	templateUrl: './partials/app.html'
+	templateUrl: './partials/app.html',
+	providers: [ EmpDetailService ]
 })
-/*
-export class Countries {
-
-	countryName: string;
-	countryShortName: string;
-
-}*/
-
 
 export class AppComponent {
-	
-	countryName:  string;
 
-	countryList: any;
+	constructor(private empDetailService: EmpDetailService) {}
 
+	ngOnInit(){
 
-	onClickTest(item, ele){
-		// console.log(item);
-		// console.log(ele);
-		this.countryName = item;
-	}
-
-	addCountryFn(value){
-
-		if(value !== '' && this.countryList.indexOf(value) < 0) {
-			this.countryList.push(value);
-		}
+		this.empDetailService.fetchData().subscribe(
+			(data) => console.log(data)
+		);
 
 	}
 
-	constructor() {
-		this.countryName = "CANADA";
-		this.countryList = [
-			"Canada", "United State", "United Kingdom", "Switzerland"
-		];
-	}
 }
-/*
-var COUNTRIES:Countries[] = [{
-	countryName: "Canada",
-	countryShortName: "CA"
-}, {
-	countryName: "Netherland",
-	countryShortName: "ND"
-}, {
-	countryName: "Austria",
-	countryShortName: "AS"
-}, {
-	countryName: "Astralia",
-	countryShortName: "AST"
-}, {
-	countryName: "Swizerland",
-	countryShortName: "SZ"
-}];*/

@@ -1,7 +1,146 @@
-li {
-	background: #898989;
-	color: white;
-	cursor: pointer;
-	margin: .5em 0;
-	padding: .5em;
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Gist
+ @abhi-das
+ Sign out
+ Unwatch 1
+  Star 0
+  Fork 0 abhi-das/angularstart
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Settings Insights 
+Branch: feature/user-p… Find file Copy pathangularstart/css/page.css
+de9e2eb  3 hours ago
+@abhi-das abhi-das opaque token
+1 contributor
+RawBlameHistory     
+125 lines (116 sloc)  1.74 KB
+* { 
+	padding: 0;
+	margin: 0;
 }
+body, form {
+	font-family: 'Ubuntu', sans-serif;
+}
+body {
+	background: #EFF2EC;
+}
+.margin-bottom {
+	margin-bottom: 1em;
+}
+.container {
+	width: 80%;
+	margin: auto;
+}
+.header {
+	color: #747671;
+}
+.header, 
+.user-info {
+	background: #ffffff;
+	border-bottom: 1px solid #D7DFD0;
+	padding: 1em 1em;
+}
+.user-info-container {
+	border: 1px solid #b6caa4;
+	margin: 1em;
+	text-align: center;
+	width: 200px;
+    border-radius: 5px;
+}
+
+.text-small{
+	font-size: .7em;
+	font-weight: bold;
+}
+
+.user-info-img {
+	clip-path: circle(80px at center);
+	margin: 1em;
+}
+.user-info-name {
+	color: #fff;
+}
+.icon-set {
+	border-top: 1px solid #D7DFD0;
+	padding: .5em;
+	list-style: none;
+	margin: 0 .8em;
+
+}
+.icon-set li {
+	width: 25px;
+	height: 20px;
+	background: #ffffff;
+	display: inline-block;
+	margin: .5em;
+	cursor: pointer;
+}
+
+.icon-set li:hover{
+	background: #D7DFD0;
+}
+
+.profile-bg {
+	background-image: url('../img/bg.jpg');
+	background-position: top left;
+	background-repeat: no-repeat;
+	width: 100%;
+}
+.bg-opac{
+	background: rgba(255, 255, 255, 0.5);
+}
+.user-info-title{
+	padding-bottom: 2em;
+}
+.email {
+	color: #2a2929;
+}
+.inline {
+	display: inline-block;
+}
+
+.user-profile-form label {
+	display: block;
+	margin-bottom: .5em; 
+	margin-top: .5em; 
+}
+
+
+.user-profile-form .field{
+	display: block;
+	padding: .5em;
+	border-radius: 5px;
+	outline: none;
+	border: 1px solid #D7DFD0; 
+	width: 100%;
+}
+.form-container {
+	vertical-align: top;
+	padding: 1em;
+	font-size: .8em;
+	color: #747671; 
+}
+.submit-cta {
+	margin-top: 1em;
+	outline: none;
+	border-radius: 5px;
+	border: 1px solid #D7DFD0;
+	background: #809256; 
+	padding: .5em 1em; 
+	color: #fff;
+}
+
+.submit-cta[disabled] {
+	background: #ccc;
+	color: #999;
+}
+.error {
+	color: red;
+	display: inline-block;
+	margin: 1em; 
+}
+Contact GitHub API Training Shop Blog About
+© 2017 GitHub, Inc. Terms Privacy Security Status Help

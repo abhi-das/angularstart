@@ -1,0 +1,19 @@
+[
+	{
+		"name": "George Miller",
+		"location": "Sanfrancisco",
+		"role": "Sales Executive"
+	}, {
+		"name": "John Frage",
+		"location": "New York",
+		"role": "Senior Sales Executive"
+	}, {
+		"name": "Jose Al",
+		"location": "Newzeland",
+		"role": "Software Developer"
+	}, {
+		"name": "Mike Author",
+		"location": "Germeny",
+		"role": "Application Develop"
+	}
+]
