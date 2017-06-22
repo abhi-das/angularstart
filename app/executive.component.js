@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/router'], function(exports_1, context_1) {
+System.register(['@angular/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,40 +10,28 @@ System.register(['@angular/core', '@angular/router'], function(exports_1, contex
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1;
-    var AppComponent;
+    var core_1;
+    var ExecutiveComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (router_1_1) {
-                router_1 = router_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent(activedRoute) {
-                    this.activedRoute = activedRoute;
+            ExecutiveComponent = (function () {
+                function ExecutiveComponent() {
                 }
-                AppComponent.prototype.ngOnInit = function () {
-                    /*this.activedRoute.params.subscribe(params => {
-                        let sm = params['executive'];
-                        if(sm == 'home') {
-                            sm = '';
-                        }
-                    })*/
-                };
-                AppComponent = __decorate([
+                ExecutiveComponent = __decorate([
                     core_1.Component({
-                        selector: 'app',
-                        templateUrl: './partials/app.html'
+                        selector: "exective",
+                        templateUrl: './partials/executive.html'
                     }), 
-                    __metadata('design:paramtypes', [router_1.ActivatedRoute])
-                ], AppComponent);
-                return AppComponent;
+                    __metadata('design:paramtypes', [])
+                ], ExecutiveComponent);
+                return ExecutiveComponent;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("ExecutiveComponent", ExecutiveComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=executive.component.js.map

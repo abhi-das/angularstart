@@ -1,17 +1,21 @@
 import { NgModule } from '@angular/core';
 import  { BrowserModule } from '@angular/platform-browser';
 
+import { HomeComponent } from './home.component';
+import { ContactComponent } from './contact.component';
+import { ExecutiveComponent } from './executive.component';
 import { AppComponent } from './app.component';
 
-import { FormsModule } from '@angular/forms';
+import { routing } from './app.route';
+
 
 @NgModule({
 	imports:[
 		BrowserModule,
-		FormsModule
+		routing
 	],
 	declarations: [
-		AppComponent
+		AppComponent, HomeComponent, ContactComponent, ExecutiveComponent
 	],
 	bootstrap: [
 		AppComponent
