@@ -1,0 +1,11 @@
+<div class="notification">
+	<div class='container'> 
+		<ul class="notify">
+			<li *ngFor="let notify of notifications" class="notify-list">Priority: {{notify.priority}} - Type: {{notify.type}}</li>
+		</ul>
+		<a href="/dashboard">Dashboard</a>
+		<a (click)="onAdd()">Add Notification</a>
+		<a (click)="onDelete()">Delete Notification</a>
+	</div>
+
+</div>
