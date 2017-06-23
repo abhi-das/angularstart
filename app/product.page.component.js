@@ -11,27 +11,27 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent;
+    var ProductPageComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            ProductPageComponent = (function () {
+                function ProductPageComponent() {
                 }
-                AppComponent = __decorate([
+                ProductPageComponent = __decorate([
                     core_1.Component({
-                        selector: 'app',
-                        templateUrl: './partials/app.html'
+                        selector: "product-page",
+                        templateUrl: "./partials/product-page.html"
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], ProductPageComponent);
+                return ProductPageComponent;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("ProductPageComponent", ProductPageComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=product.page.component.js.map

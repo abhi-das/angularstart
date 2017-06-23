@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/platform-browser', './app.component', '@angular/forms'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/platform-browser', './app.component', './home.page.component', './product.page.component', './app.router'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', '@angular/platform-browser', './app.component'
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, platform_browser_1, app_component_1, forms_1;
+    var core_1, platform_browser_1, app_component_1, home_page_component_1, product_page_component_1, app_router_1;
     var AppModule;
     return {
         setters:[
@@ -23,8 +23,14 @@ System.register(['@angular/core', '@angular/platform-browser', './app.component'
             function (app_component_1_1) {
                 app_component_1 = app_component_1_1;
             },
-            function (forms_1_1) {
-                forms_1 = forms_1_1;
+            function (home_page_component_1_1) {
+                home_page_component_1 = home_page_component_1_1;
+            },
+            function (product_page_component_1_1) {
+                product_page_component_1 = product_page_component_1_1;
+            },
+            function (app_router_1_1) {
+                app_router_1 = app_router_1_1;
             }],
         execute: function() {
             AppModule = (function () {
@@ -34,10 +40,10 @@ System.register(['@angular/core', '@angular/platform-browser', './app.component'
                     core_1.NgModule({
                         imports: [
                             platform_browser_1.BrowserModule,
-                            forms_1.FormsModule
+                            app_router_1.Routing
                         ],
                         declarations: [
-                            app_component_1.AppComponent
+                            app_component_1.AppComponent, home_page_component_1.HomePageComponent, product_page_component_1.ProductPageComponent
                         ],
                         bootstrap: [
                             app_component_1.AppComponent
