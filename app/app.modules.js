@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/platform-browser', './app.component', '@angular/forms'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/platform-browser', './app.component', './menu.component', './home.decore.component', './bath.product.component', './computer.game.component', './app.route'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', '@angular/platform-browser', './app.component'
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, platform_browser_1, app_component_1, forms_1;
+    var core_1, platform_browser_1, app_component_1, menu_component_1, home_decore_component_1, bath_product_component_1, computer_game_component_1, app_route_1;
     var AppModule;
     return {
         setters:[
@@ -23,8 +23,20 @@ System.register(['@angular/core', '@angular/platform-browser', './app.component'
             function (app_component_1_1) {
                 app_component_1 = app_component_1_1;
             },
-            function (forms_1_1) {
-                forms_1 = forms_1_1;
+            function (menu_component_1_1) {
+                menu_component_1 = menu_component_1_1;
+            },
+            function (home_decore_component_1_1) {
+                home_decore_component_1 = home_decore_component_1_1;
+            },
+            function (bath_product_component_1_1) {
+                bath_product_component_1 = bath_product_component_1_1;
+            },
+            function (computer_game_component_1_1) {
+                computer_game_component_1 = computer_game_component_1_1;
+            },
+            function (app_route_1_1) {
+                app_route_1 = app_route_1_1;
             }],
         execute: function() {
             AppModule = (function () {
@@ -33,11 +45,10 @@ System.register(['@angular/core', '@angular/platform-browser', './app.component'
                 AppModule = __decorate([
                     core_1.NgModule({
                         imports: [
-                            platform_browser_1.BrowserModule,
-                            forms_1.FormsModule
+                            platform_browser_1.BrowserModule, app_route_1.AppRoute
                         ],
                         declarations: [
-                            app_component_1.AppComponent
+                            app_component_1.AppComponent, menu_component_1.MenuListComponent, home_decore_component_1.HomeDecoreComponent, bath_product_component_1.BathProductComponent, computer_game_component_1.ComputerGameComponent
                         ],
                         bootstrap: [
                             app_component_1.AppComponent

@@ -11,28 +11,27 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent;
+    var HomeDecoreComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            HomeDecoreComponent = (function () {
+                function HomeDecoreComponent() {
                 }
-                AppComponent = __decorate([
+                HomeDecoreComponent = __decorate([
                     core_1.Component({
-                        selector: 'app',
-                        templateUrl: './partials/app.html',
-                        inputs: ['currentPage']
+                        selector: 'home-decore',
+                        templateUrl: './partials/home-decore.html'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], HomeDecoreComponent);
+                return HomeDecoreComponent;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("HomeDecoreComponent", HomeDecoreComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=home.decore.component.js.map

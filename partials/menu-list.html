@@ -1,0 +1,7 @@
+<div>
+	<ul class="menu-list">
+		<li class="menu-item" 
+			['currentPage'] = {{itm.name}}
+			*ngFor="let itm of menuList"><a routerLink="/{{itm.path}}">{{itm.name}}</a></li>
+	</ul>
+</div>
