@@ -30,8 +30,8 @@ System.register(['@angular/core', './nav.service'], function(exports_1, context_
                     this.navList = this.navSrv.getNav();
                 };
                 NavComponent.prototype.changePage = function (vl) {
-                    // console.log(vl.target.innerHTML);
                     this.childEv.emit(vl.target.innerHTML);
+                    this.navSrv.setActiveNav(vl.target.innerHTML);
                 };
                 NavComponent = __decorate([
                     core_1.Component({

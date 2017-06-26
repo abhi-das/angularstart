@@ -1,5 +1,7 @@
 <nav>
 	<ul class='main-nav'>
-		<li *ngFor="let itm of navList" (click)="changePage($event)">{{itm.name}}</li>
+		<li *ngFor="let itm of navList" 
+			[navActiveMenuItem]="itm.isActive"
+			(click)="changePage($event)">{{itm.name}}</li>
 	</ul>
 </nav>

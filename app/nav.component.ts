@@ -10,7 +10,6 @@ import { NavService } from './nav.service';
 
 export class NavComponent {
 
-
 	private childEv = new EventEmitter<string>();
 	navList;
 
@@ -22,8 +21,8 @@ export class NavComponent {
 
 	changePage(vl) {
 
-		// console.log(vl.target.innerHTML);
 		this.childEv.emit(vl.target.innerHTML);
+		this.navSrv.setActiveNav(vl.target.innerHTML);
 	}
 
 }

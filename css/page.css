@@ -21,6 +21,10 @@
 	color: #ffffff;
 }
 
+.main-nav li.isActive {
+	background: #7ecece;
+}
+
 .container{
 	width: 80%;
 	margin: auto;
