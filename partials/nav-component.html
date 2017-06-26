@@ -1,0 +1,5 @@
+<nav>
+	<ul class='main-nav'>
+		<li *ngFor="let itm of navList" (click)="changePage($event)">{{itm.name}}</li>
+	</ul>
+</nav>

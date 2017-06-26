@@ -11,33 +11,27 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent;
+    var PageTemplateComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            PageTemplateComponent = (function () {
+                function PageTemplateComponent() {
                 }
-                AppComponent.prototype.ngOnInit = function () {
-                    this.pageName = 'HOME';
-                };
-                AppComponent.prototype.onClickNav = function (event) {
-                    this.pageName = event.toUpperCase();
-                };
-                AppComponent = __decorate([
+                PageTemplateComponent = __decorate([
                     core_1.Component({
-                        selector: 'app',
-                        templateUrl: './partials/app.html'
+                        selector: 'page-component',
+                        templateUrl: './partials/page-template.html'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], PageTemplateComponent);
+                return PageTemplateComponent;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("PageTemplateComponent", PageTemplateComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=page.component.js.map

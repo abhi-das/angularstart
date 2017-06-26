@@ -1,7 +1,30 @@
-li {
-	background: #898989;
-	color: white;
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.main-nav {
+	list-style: none;
+	border-bottom: 1px solid #c1c1c1;
+}
+
+.main-nav li {
+	padding: .5em 1em;
 	cursor: pointer;
-	margin: .5em 0;
-	padding: .5em;
+	transition: all .2s ease-out;
+	display: inline-block;
+}
+
+.main-nav li:hover {
+	background: #7e7e7e;
+	color: #ffffff;
+}
+
+.container{
+	width: 80%;
+	margin: auto;
+}
+h1 {
+	margin: 1em 0;
 }
