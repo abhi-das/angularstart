@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/platform-browser', './nav.component', './app.component', './nav.active.directive'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/platform-browser', './nav.component', './app.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', '@angular/platform-browser', './nav.component'
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, platform_browser_1, nav_component_1, app_component_1, nav_active_directive_1;
+    var core_1, platform_browser_1, nav_component_1, app_component_1;
     var AppModule;
     return {
         setters:[
@@ -25,9 +25,6 @@ System.register(['@angular/core', '@angular/platform-browser', './nav.component'
             },
             function (app_component_1_1) {
                 app_component_1 = app_component_1_1;
-            },
-            function (nav_active_directive_1_1) {
-                nav_active_directive_1 = nav_active_directive_1_1;
             }],
         execute: function() {
             AppModule = (function () {
@@ -39,7 +36,7 @@ System.register(['@angular/core', '@angular/platform-browser', './nav.component'
                             platform_browser_1.BrowserModule
                         ],
                         declarations: [
-                            app_component_1.AppComponent, nav_component_1.NavComponent, nav_active_directive_1.NavActiveDirective
+                            app_component_1.AppComponent, nav_component_1.NavComponent
                         ],
                         bootstrap: [
                             app_component_1.AppComponent

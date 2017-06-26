@@ -15,6 +15,7 @@ export class AppComponent {
 	constructor(private navSrv: NavService) {}
 
 	ngOnInit() {
+		
 		this.pageName = this.navSrv.getActiveNav().name.toUpperCase();
 
 	}

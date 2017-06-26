@@ -29,9 +29,9 @@ System.register(['@angular/core', './nav.service'], function(exports_1, context_
                 NavComponent.prototype.ngOnInit = function () {
                     this.navList = this.navSrv.getNav();
                 };
-                NavComponent.prototype.changePage = function (vl) {
+                NavComponent.prototype.changePageSelection = function (vl, idx) {
                     this.childEv.emit(vl.target.innerHTML);
-                    this.navSrv.setActiveNav(vl.target.innerHTML);
+                    this.selectedMenu = idx;
                 };
                 NavComponent = __decorate([
                     core_1.Component({

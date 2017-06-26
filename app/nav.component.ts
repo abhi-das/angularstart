@@ -12,6 +12,7 @@ export class NavComponent {
 
 	private childEv = new EventEmitter<string>();
 	navList;
+	selectedMenu;
 
 	constructor(private navSrv: NavService) {}
 
@@ -19,10 +20,11 @@ export class NavComponent {
 		this.navList = this.navSrv.getNav();
 	}
 
-	changePage(vl) {
+	changePageSelection(vl,idx) {
 
 		this.childEv.emit(vl.target.innerHTML);
-		this.navSrv.setActiveNav(vl.target.innerHTML);
+		
+		this.selectedMenu = idx;
 	}
 
 }
