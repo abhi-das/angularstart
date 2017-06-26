@@ -34,11 +34,11 @@ export class NavService {
 
 	setActiveNav(name) {
 
-		var nm = name.trim();
-		var tt = this.navList.map(function(existingItm) { 
-			return existingItm.name == name 
-		});
-		console.log(tt);
+		// var nm = name.trim();
+		// var tt = this.navList.map(function(existingItm) { 
+		// 	return existingItm.name == name 
+		// });
+		// console.log(tt);
 	}	
 
 }

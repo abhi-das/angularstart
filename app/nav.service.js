@@ -39,11 +39,11 @@ System.register([], function(exports_1, context_1) {
                     ;
                 };
                 NavService.prototype.setActiveNav = function (name) {
-                    var nm = name.trim();
-                    var tt = this.navList.map(function (existingItm) {
-                        return existingItm.name == name;
-                    });
-                    console.log(tt);
+                    // var nm = name.trim();
+                    // var tt = this.navList.map(function(existingItm) { 
+                    // 	return existingItm.name == name 
+                    // });
+                    // console.log(tt);
                 };
                 return NavService;
             }());
