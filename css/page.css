@@ -32,3 +32,7 @@
 h1 {
 	margin: 1em 0;
 }
+
+.short-desc {
+	margin: 1em auto;
+}
