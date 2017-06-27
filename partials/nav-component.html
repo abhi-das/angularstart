@@ -1,0 +1,8 @@
+<nav>
+	<ul class="container nav-component">
+		<li *ngFor="let itm of navList; let idx = index;"
+			[class.activeCls]="idx==selectedIdx"
+			(click)="onMenuClick(idx)"
+		>{{itm.name}}</li>
+	</ul>
+</nav>

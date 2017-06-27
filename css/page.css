@@ -1,7 +1,43 @@
-li {
-	background: #898989;
-	color: white;
-	cursor: pointer;
-	margin: .5em 0;
-	padding: .5em;
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Dosis', sans-serif;
+}
+
+body {
+	background: #ccc;
+}
+.app-container{
+	background: #fff;
+}
+.container {
+	width: 80%;
+	margin: 0 auto 1em auto;
+	padding: 1em; 
+}
+header,
+nav {
+	box-shadow: 1px 1px 2px #846e9b;
+	display: block;
+}
+
+.nav-component {
+	list-style: none;
+}
+.nav-component li {
+	display: inline-block;
+	margin-right: -4px;
+	padding: .5em 1em;
+	cursor: pointer; 
+	border-right: 1px solid gray;
+}
+
+.nav-component li:last-child {
+	border-right: none; 
+}
+
+.nav-component li.activeCls,
+.nav-component li:hover {
+	background: green;
+	color: #fff;
 }

@@ -1,27 +1,8 @@
-<div>
-	<h1>Artist Directory {{countryName}}</h1>
-	<p>
-		Laborum veniam ut eu proident deserunt sed velit reprehenderit cupidatat laboris dolore dolor eu commodo.
-	</p>
-	<input type="text" #addCountry
-		(keyup.enter)="addCountryFn(addCountry.value)"
-		[(ngModel)] = "countryName"
-	>
-	<button
-		(click)="addCountryFn(addCountry.value)"
-	>
-		Add Country
-	</button>
-
-	<ul>
-		
-		<li 
-			#liElement
-			*ngFor="let country of countryList; let i = index;" 
-			(click)="onClickTest(country, liElement)"
-			>
-			{{country}}
-		</li>
-
-	</ul>
+<div class="app-container">
+	<header>
+		<div class="container">
+			<h1>Artist Directory </h1>
+		</div>
+	</header>
+	<nav-component (customChildEve)="getActiveMenuFromChild($event)"></nav-component>
 </div>
