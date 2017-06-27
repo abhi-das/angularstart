@@ -22,10 +22,7 @@ export class NavListService {
 	}
 
 	getActiveMenuList() {
-		// var isActiveIndex = this.menuList.map(function(itm){
-		// 	return itm.isActive===true;
-		// }).indexOf(true);
-
+		
 		var activeList = this.menuList.filter(function(ele, idx){
 
 			if(ele.isActive === true) {

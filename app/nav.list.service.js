@@ -29,9 +29,6 @@ System.register([], function(exports_1, context_1) {
                     return this.menuList;
                 };
                 NavListService.prototype.getActiveMenuList = function () {
-                    // var isActiveIndex = this.menuList.map(function(itm){
-                    // 	return itm.isActive===true;
-                    // }).indexOf(true);
                     var activeList = this.menuList.filter(function (ele, idx) {
                         if (ele.isActive === true) {
                             var selectActive = {

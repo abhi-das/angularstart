@@ -4,16 +4,17 @@ import { NavListService } from './nav.list.service';
 @Component({
 	selector: 'nav-component',
 	templateUrl: './partials/nav-component.html',
-	outputs: ['customChildEvent'],
+	outputs: ['customChildEve'],
 	providers: [NavListService]
 })
 
 export class NavComponent {
 
+	private customChildEve = new EventEmitter<string>();
+
 	navList: any;
 	selectedIdx: any;
 	sectionTitle: string;
-	private customChildEve = new EventEmitter<any>();
 
 	constructor(private navListSrv: NavListService) {}
 
@@ -23,9 +24,10 @@ export class NavComponent {
 	}
 
 	onMenuClick(idx) {
-		this.selectedIdx = idx;
-		
+
 		this.customChildEve.emit(idx);
+
+		this.selectedIdx = idx;	
 	}
 
 

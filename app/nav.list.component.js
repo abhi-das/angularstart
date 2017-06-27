@@ -31,14 +31,14 @@ System.register(['@angular/core', './nav.list.service'], function(exports_1, con
                     this.selectedIdx = this.navListSrv.getActiveMenuList()[0].isActive;
                 };
                 NavComponent.prototype.onMenuClick = function (idx) {
-                    this.selectedIdx = idx;
                     this.customChildEve.emit(idx);
+                    this.selectedIdx = idx;
                 };
                 NavComponent = __decorate([
                     core_1.Component({
                         selector: 'nav-component',
                         templateUrl: './partials/nav-component.html',
-                        outputs: ['customChildEvent'],
+                        outputs: ['customChildEve'],
                         providers: [nav_list_service_1.NavListService]
                     }), 
                     __metadata('design:paramtypes', [nav_list_service_1.NavListService])

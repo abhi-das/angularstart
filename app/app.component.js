@@ -1,4 +1,4 @@
-System.register(['@angular/core'], function(exports_1, context_1) {
+System.register(['@angular/core', './nav.list.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,26 +10,34 @@ System.register(['@angular/core'], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, nav_list_service_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (nav_list_service_1_1) {
+                nav_list_service_1 = nav_list_service_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
-                function AppComponent() {
+                function AppComponent(navLsSrv) {
+                    this.navLsSrv = navLsSrv;
                 }
-                AppComponent.prototype.getActiveMenuFromChild = function (event) {
-                    console.log(event);
+                AppComponent.prototype.ngOnInit = function () {
+                    this.title = this.navLsSrv.getActiveMenuList()[0].name;
+                };
+                AppComponent.prototype.getActiveMenuFromChild = function (idx) {
+                    this.title = this.navLsSrv.getMenuByIndex(idx).name;
                 };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'app',
-                        templateUrl: './partials/app.html'
+                        templateUrl: './partials/app.html',
+                        providers: [nav_list_service_1.NavListService]
                     }), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [nav_list_service_1.NavListService])
                 ], AppComponent);
                 return AppComponent;
             }());
