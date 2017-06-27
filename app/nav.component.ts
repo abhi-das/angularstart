@@ -18,6 +18,7 @@ export class NavComponent {
 
 	ngOnInit() {
 		this.navList = this.navSrv.getNav();
+		this.selectedMenu = this.navSrv.getActiveNav().index;
 	}
 
 	changePageSelection(vl,idx) {

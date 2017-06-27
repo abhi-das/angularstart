@@ -16,7 +16,7 @@ export class AppComponent {
 
 	ngOnInit() {
 		
-		this.pageName = this.navSrv.getActiveNav().name.toUpperCase();
+		this.pageName = this.navSrv.getActiveNav().element["name"].toUpperCase();
 
 	}
 

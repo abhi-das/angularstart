@@ -25,10 +25,16 @@ export class NavService {
 	getActiveNav() {
 		var activeNavIdx = this.navList.map(function(itm){ return itm.isActive === true }).indexOf(true);
 		if (activeNavIdx >= 0) { 
-			return	this.navList[activeNavIdx];
+			return	{
+				element: this.navList[activeNavIdx],
+				index: activeNavIdx
+			};
 		} else{ 
 			this.navList[0].isActive = true;
-			return	this.navList[0];
+			return	{
+				element: this.navList[0],
+				index: 0
+			};
 		};
 	}
 
