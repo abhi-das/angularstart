@@ -1,0 +1,15 @@
+<div class='new-comp'>
+	<div class="container">
+		
+		<h2>Update with New Emp List</h2>
+		<ul class="new-list">
+			<li *ngFor="let nlst of newLst"><p>{{nlst.name}}</p><p>{{nlst.location}}</p></li>
+		</ul>
+		<button (click)="showNewList()"> Show the new list</button>
+
+		<hr>
+		<h2>Update Only Message</h2>
+		<button (click)="updateAllMsg()">Shared Service Message Update</button>
+
+	</div>
+</div>

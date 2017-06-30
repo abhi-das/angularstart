@@ -1,4 +1,4 @@
-System.register(['@angular/core'], function(exports_1, context_1) {
+System.register(['@angular/core', 'rxjs/BehaviorSubject'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,28 +10,33 @@ System.register(['@angular/core'], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
-    var AppComponent;
+    var core_1, BehaviorSubject_1;
+    var SharedService;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (BehaviorSubject_1_1) {
+                BehaviorSubject_1 = BehaviorSubject_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            SharedService = (function () {
+                function SharedService() {
+                    this.messageSource = new BehaviorSubject_1.BehaviorSubject('some message');
+                    this.currentMessage = this.messageSource.asObservable();
                 }
-                AppComponent = __decorate([
-                    core_1.Component({
-                        selector: 'app',
-                        templateUrl: './partials/app.html'
-                    }), 
+                SharedService.prototype.changeMessage = function (message) {
+                    this.messageSource.next(message);
+                };
+                SharedService = __decorate([
+                    core_1.Injectable(), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], SharedService);
+                return SharedService;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("SharedService", SharedService);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=shared.service.js.map

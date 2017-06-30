@@ -1,18 +1,23 @@
 import { NgModule } from '@angular/core';
 import  { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import { SharedService } from './shared.service';
+import { EmpService } from './emp.service';
 
-import { FormsModule } from '@angular/forms';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home.component';
+import { ProductDisplayComponent } from './product.display';
+import { NewListComponent } from './new.list.comp';
+
 
 @NgModule({
 	imports:[
-		BrowserModule,
-		FormsModule
+		BrowserModule
 	],
 	declarations: [
-		AppComponent
+		AppComponent, HomeComponent, ProductDisplayComponent, NewListComponent
 	],
+	providers: [ SharedService, EmpService ],
 	bootstrap: [
 		AppComponent
 	]
