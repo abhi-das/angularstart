@@ -1,4 +1,4 @@
-System.register(['@angular/core'], function(exports_1, context_1) {
+System.register(['@angular/core', 'rxjs/Observable', 'rxjs/add/observable/fromEvent'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,30 +10,38 @@ System.register(['@angular/core'], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, Observable_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            }],
+            },
+            function (Observable_1_1) {
+                Observable_1 = Observable_1_1;
+            },
+            function (_1) {}],
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
-                    this.countryName = "CANADA";
-                    this.countryList = [
-                        "Canada", "United State", "United Kingdom", "Switzerland"
-                    ];
                 }
-                AppComponent.prototype.onClickTest = function (item, ele) {
-                    // console.log(item);
-                    // console.log(ele);
-                    this.countryName = item;
+                AppComponent.prototype.ngAfterViewInit = function () {
+                    this.tst = document.getElementById('tst');
+                    var sugg = Observable_1.Observable.fromEvent(this.tst, 'keyup')
+                        .subscribe(function (result) {
+                        console.log(result);
+                    }, function (err) {
+                        console.error("Error > ", err);
+                    }, function () {
+                        console.log("input subs completed !");
+                    });
+                    this.btn = document.getElementById('btn');
+                    var bbn = Observable_1.Observable.fromEvent(this.btn, 'click')
+                        .subscribe(function (rst) { return console.log(rst); });
                 };
-                AppComponent.prototype.addCountryFn = function (value) {
-                    if (value !== '' && this.countryList.indexOf(value) < 0) {
-                        this.countryList.push(value);
-                    }
+                AppComponent.prototype.inputUpdate = function (evt) {
+                    this.myModel = evt;
+                    console.log(this.myModel);
                 };
                 AppComponent = __decorate([
                     core_1.Component({
@@ -48,21 +56,4 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         }
     }
 });
-/*
-var COUNTRIES:Countries[] = [{
-    countryName: "Canada",
-    countryShortName: "CA"
-}, {
-    countryName: "Netherland",
-    countryShortName: "ND"
-}, {
-    countryName: "Austria",
-    countryShortName: "AS"
-}, {
-    countryName: "Astralia",
-    countryShortName: "AST"
-}, {
-    countryName: "Swizerland",
-    countryShortName: "SZ"
-}];*/ 
 //# sourceMappingURL=app.component.js.map

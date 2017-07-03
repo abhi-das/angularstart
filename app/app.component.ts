@@ -1,60 +1,50 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/fromEvent';
 
 @Component({
 	selector: 'app',
 	templateUrl: './partials/app.html'
 })
-/*
-export class Countries {
-
-	countryName: string;
-	countryShortName: string;
-
-}*/
 
 
 export class AppComponent {
 	
-	countryName:  string;
+	myModel;
 
-	countryList: any;
+	tst;
+	btn;
+
+	ngAfterViewInit() {
+
+		this.tst = document.getElementById('tst');
+
+		var sugg = Observable.fromEvent(this.tst, 'keyup')
+			.subscribe(
+				function(result) {
+					console.log(result);
+				},
+				function(err) {
+					console.error("Error > ", err);
+				},
+				function() {
+					console.log("input subs completed !");
+				}
+			)
 
 
-	onClickTest(item, ele){
-		// console.log(item);
-		// console.log(ele);
-		this.countryName = item;
+		this.btn = document.getElementById('btn');
+		var bbn = Observable.fromEvent(this.btn, 'click')
+			.subscribe(
+				rst => console.log(rst)
+			);
+
+
 	}
 
-	addCountryFn(value){
-
-		if(value !== '' && this.countryList.indexOf(value) < 0) {
-			this.countryList.push(value);
-		}
-
+	inputUpdate(evt) {
+		this.myModel = evt;
+		console.log(this.myModel);
 	}
 
-	constructor() {
-		this.countryName = "CANADA";
-		this.countryList = [
-			"Canada", "United State", "United Kingdom", "Switzerland"
-		];
-	}
 }
-/*
-var COUNTRIES:Countries[] = [{
-	countryName: "Canada",
-	countryShortName: "CA"
-}, {
-	countryName: "Netherland",
-	countryShortName: "ND"
-}, {
-	countryName: "Austria",
-	countryShortName: "AS"
-}, {
-	countryName: "Astralia",
-	countryShortName: "AST"
-}, {
-	countryName: "Swizerland",
-	countryShortName: "SZ"
-}];*/

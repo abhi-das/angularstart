@@ -1,27 +1,10 @@
 <div>
-	<h1>Artist Directory {{countryName}}</h1>
-	<p>
-		Laborum veniam ut eu proident deserunt sed velit reprehenderit cupidatat laboris dolore dolor eu commodo.
-	</p>
-	<input type="text" #addCountry
-		(keyup.enter)="addCountryFn(addCountry.value)"
-		[(ngModel)] = "countryName"
-	>
-	<button
-		(click)="addCountryFn(addCountry.value)"
-	>
-		Add Country
-	</button>
+	<h1>Artist Directory</h1>
+	
+	<!-- <input type="text" ([ngModel])="myModel" (input)="inputUpdate($event)" value={{myModel}}> -->
+	<input type="text" id="tst">
 
-	<ul>
-		
-		<li 
-			#liElement
-			*ngFor="let country of countryList; let i = index;" 
-			(click)="onClickTest(country, liElement)"
-			>
-			{{country}}
-		</li>
+	<button id="btn"> try button </button>
 
-	</ul>
+	<amazon-feed></amazon-feed>
 </div>
