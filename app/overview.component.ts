@@ -9,6 +9,7 @@ import { EmpDetailService } from './emp.detail.service';
 
 export class OverviewComponent {
 
+	empId;
 	displayOverview;
 
 	constructor(private actRoute: ActivatedRoute, private empDtSrv: EmpDetailService) {}
@@ -33,7 +34,9 @@ export class OverviewComponent {
 		);*/
 
 		this.actRoute.parent.params.subscribe(params => { 
-			this.displayOverview = this.empDtSrv.getEmpDetail(params.id);
+			//params direct can be assigned to getEmpDetail function; require to store in variable, otherwise build error will be occured.
+			this.empId = params;
+			this.displayOverview = this.empDtSrv.getEmpDetail(this.empId.id);
 		});
 
 	}

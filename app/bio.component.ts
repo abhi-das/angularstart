@@ -8,6 +8,7 @@ import { EmpDetailService } from './emp.detail.service';
 
 export class BioComponent {
 
+	empId;
 	displayBio;
 	constructor(private activeRoute: ActivatedRoute, private empDtSrv: EmpDetailService){}
 
@@ -28,7 +29,9 @@ export class BioComponent {
 		);*/	
 
 		this.activeRoute.parent.params.subscribe(params => { 
-			this.displayBio = this.empDtSrv.getEmpDetail(params.id);
+			//params direct can be assigned to getEmpDetail function; require to store in variable, otherwise build error will be occured.
+			this.empId = params;
+			this.displayBio = this.empDtSrv.getEmpDetail(this.empId.id);
 		});
 	}
 

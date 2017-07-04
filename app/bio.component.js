@@ -46,7 +46,9 @@ System.register(['@angular/core', '@angular/router', './emp.detail.service'], fu
                     );*/
                     var _this = this;
                     this.activeRoute.parent.params.subscribe(function (params) {
-                        _this.displayBio = _this.empDtSrv.getEmpDetail(params.id);
+                        //params direct can be assigned to getEmpDetail function; require to store in variable, otherwise build error will be occured.
+                        _this.empId = params;
+                        _this.displayBio = _this.empDtSrv.getEmpDetail(_this.empId.id);
                     });
                 };
                 BioComponent.prototype.ngOnDestroy = function () {
