@@ -1,0 +1,11 @@
+<div class="main-container">
+	<div class="container">
+		<h2>{{empBio.name}}</h2>
+		<button class="btn" (click)="onBtnSelect('overview')">Overview</button>
+		<button class="btn" (click)="onBtnSelect('bio')">Bio</button>
+		
+	</div>
+
+	<router-outlet></router-outlet>
+</div>
+

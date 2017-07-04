@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/platform-browser', './app.component', '@angular/forms'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/platform-browser', './app.route', './emp.list.service', './emp.detail.service', './emp.home.component', './emp.list.component', './emp.detail.component', './overview.component', './bio.component', './app.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', '@angular/platform-browser', './app.component'
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, platform_browser_1, app_component_1, forms_1;
+    var core_1, platform_browser_1, app_route_1, emp_list_service_1, emp_detail_service_1, emp_home_component_1, emp_list_component_1, emp_detail_component_1, overview_component_1, bio_component_1, app_component_1;
     var AppModule;
     return {
         setters:[
@@ -20,11 +20,32 @@ System.register(['@angular/core', '@angular/platform-browser', './app.component'
             function (platform_browser_1_1) {
                 platform_browser_1 = platform_browser_1_1;
             },
+            function (app_route_1_1) {
+                app_route_1 = app_route_1_1;
+            },
+            function (emp_list_service_1_1) {
+                emp_list_service_1 = emp_list_service_1_1;
+            },
+            function (emp_detail_service_1_1) {
+                emp_detail_service_1 = emp_detail_service_1_1;
+            },
+            function (emp_home_component_1_1) {
+                emp_home_component_1 = emp_home_component_1_1;
+            },
+            function (emp_list_component_1_1) {
+                emp_list_component_1 = emp_list_component_1_1;
+            },
+            function (emp_detail_component_1_1) {
+                emp_detail_component_1 = emp_detail_component_1_1;
+            },
+            function (overview_component_1_1) {
+                overview_component_1 = overview_component_1_1;
+            },
+            function (bio_component_1_1) {
+                bio_component_1 = bio_component_1_1;
+            },
             function (app_component_1_1) {
                 app_component_1 = app_component_1_1;
-            },
-            function (forms_1_1) {
-                forms_1 = forms_1_1;
             }],
         execute: function() {
             AppModule = (function () {
@@ -34,11 +55,12 @@ System.register(['@angular/core', '@angular/platform-browser', './app.component'
                     core_1.NgModule({
                         imports: [
                             platform_browser_1.BrowserModule,
-                            forms_1.FormsModule
+                            app_route_1.APP_ROUTES
                         ],
                         declarations: [
-                            app_component_1.AppComponent
+                            app_component_1.AppComponent, emp_home_component_1.EmpHomeComponent, emp_list_component_1.EmpListComponent, emp_detail_component_1.EmpDetailComponent, overview_component_1.OverviewComponent, bio_component_1.BioComponent
                         ],
+                        providers: [emp_list_service_1.EmpListService, emp_detail_service_1.EmpDetailService],
                         bootstrap: [
                             app_component_1.AppComponent
                         ]

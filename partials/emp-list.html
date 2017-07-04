@@ -1,0 +1,9 @@
+<div class="main-container">
+	<ul class="container emp-list">
+		<li *ngFor="let emp of empListArr; let id = index;">{{emp.name}} <span class="badge" 
+			(click)="showDetailFn(id)" >info</span></li>
+		
+	</ul>
+</div>
+
+<router-outlet name="detail"></router-outlet>
