@@ -20,21 +20,7 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
-                    this.countryName = "CANADA";
-                    this.countryList = [
-                        "Canada", "United State", "United Kingdom", "Switzerland"
-                    ];
                 }
-                AppComponent.prototype.onClickTest = function (item, ele) {
-                    // console.log(item);
-                    // console.log(ele);
-                    this.countryName = item;
-                };
-                AppComponent.prototype.addCountryFn = function (value) {
-                    if (value !== '' && this.countryList.indexOf(value) < 0) {
-                        this.countryList.push(value);
-                    }
-                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'app',
@@ -48,21 +34,4 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         }
     }
 });
-/*
-var COUNTRIES:Countries[] = [{
-    countryName: "Canada",
-    countryShortName: "CA"
-}, {
-    countryName: "Netherland",
-    countryShortName: "ND"
-}, {
-    countryName: "Austria",
-    countryShortName: "AS"
-}, {
-    countryName: "Astralia",
-    countryShortName: "AST"
-}, {
-    countryName: "Swizerland",
-    countryShortName: "SZ"
-}];*/ 
 //# sourceMappingURL=app.component.js.map
