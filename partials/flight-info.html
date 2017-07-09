@@ -1,0 +1,12 @@
+<div class="container">
+
+	<p>{{flightInfo.flight}}</p>
+	<div>
+		<button class="btn inline" (click)="showConent('time')">{{flightInfo.time}}</button>
+		<button class="btn inline" (click)="showConent('location')">{{flightInfo.location}}</button>
+	</div>
+	<div class="tab-content">
+		<router-outlet></router-outlet>
+	</div>
+	<button class="btn" [routerLink]="['/flight']">Flights</button>
+</div>

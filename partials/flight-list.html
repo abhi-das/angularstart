@@ -1,0 +1,10 @@
+
+	<div class="container">
+		<ul class="flight-list">
+			<li *ngFor="let flight of flightList">
+				<p>{{flight.airways}}</p>
+				<button class="btn" (click)="showInfo(flight)">Info</button>
+			</li>
+		</ul>
+	</div>
+	

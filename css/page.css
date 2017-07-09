@@ -1,7 +1,73 @@
-li {
-	background: #898989;
-	color: white;
-	cursor: pointer;
-	margin: .5em 0;
-	padding: .5em;
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Dosis', sans-serif;
 }
+
+body {
+	background: #ccc;
+}
+
+.main-container{
+	background: #fff;
+}
+.container {
+	width: 80%;
+	margin: 0 auto 1em auto;
+	padding: 1em; 
+}
+
+.flight-list {
+	list-style: none;
+}
+.flight-list li {
+	margin: .5em; 
+	background: #d5d5d5;
+	border-radius: 5px;
+	padding: 1em;
+	display: inline-block; 
+}
+
+.btn {
+	background: #9f209f;
+	color: #fff;
+	border-radius: .2em;
+	border: none;
+	padding: .2em 1em; 
+	line-height: 2em;
+	margin-top: 1em;
+	cursor: pointer;  
+	transition: all .4s ease-out;
+}
+.btn:hover {
+	background: #4d1d4d;
+}
+.tab-content {
+	margin-top: 1em; 
+}
+
+.badge {
+	width: 30px;
+	height: 30px;
+	background: orange;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 5px;
+	border: 1px solid gray;
+	text-align: center;
+	display: inline-block;
+	line-height: 30px;
+	margin: 20px 0;
+}
+
+.time-child-list {
+	list-style: none;
+}
+
+.child-info {
+	background: #e7e7e7;
+	color: gray;
+	padding: 1em;
+	margin: 1em 0; 
+}
+
